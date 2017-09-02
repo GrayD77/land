@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'PT Sans', sans-serif; }
+
+html {
+  font-size: 10px; }
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(222, 222, 0, 0.3); }
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff; }
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none; }
+
+.main-nav li {
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin: .5rem 2rem;
+  padding: .5rem 2rem;
+  cursor: pointer; }
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+h2 {
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 1rem 2rem;
+  background-color: #234;
+  color: #fff;
+  display: inline-block;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); }
+
+section {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%); }
+  section.active {
+    transform: translateY(0); }
+  section.in-next {
+    animation: in-next .8s 1; }
+  section.out-next {
+    animation: out-next .8s 1; }
+  section.in-prev {
+    animation: in-prev .8s 1; }
+  section.out-prev {
+    animation: out-prev .8s 1; }
+
+@keyframes in-next {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes in-prev {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes out-next {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-100%); } }
+
+@keyframes out-prev {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(100%); } }
+
+.section-viewport {
+  position: relative;
+  height: 72rem;
+  width: 105rem;
+  padding: 3rem;
+  left: calc(50% - 52.5rem);
+  top: calc(50% - 36rem);
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.info-list {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  width: 30rem;
+  height: 50rem;
+  padding: 3rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); }
+  .info-list .info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: inherit;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity .2s; }
+    .info-list .info.active {
+      opacity: 1; }
+  .info-list p {
+    font-size: 2rem; }
+
+/*# sourceMappingURL=all.css.map */
